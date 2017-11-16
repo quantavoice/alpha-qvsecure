@@ -7,11 +7,23 @@
 
   "browser_action": {
     "default_icon": "qvicon.png",
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_title": "QVsecure"
   },
+"icons": {
+	"16": "qvicon.png",
+	"48": "qvicon48.png",
+	"128": "qvicon128.png"
+},
   "permissions": [
-    "http://*.quantavoice.com/", "https://*.quantavoice.com/",
+    "http://*.quantavoice.com/", 
+    "https://*.quantavoice.com/",
+    "https://www.woodsidelabs.com/",
+    "http://nominatim.openstreetmap.org/",
+    "https://ajax.googleapis.com/",
     "activeTab",
+    "contextMenus",
+    "geolocation",
     "storage"
   ]
 }

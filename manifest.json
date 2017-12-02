@@ -2,13 +2,16 @@
   "manifest_version": 2,
 
   "name": "alpha-QVsecure",
-  "description": "This extension allows the user to encrypt and sign messages using configurable identities and keys.",
+  "description": "The QuantaVoice extension enables secure communication, sharing, and blogging.",
   "version": "0.1",
 
   "browser_action": {
     "default_icon": "qvicon.png",
     "default_popup": "popup.html",
-    "default_title": "QVsecure"
+    "default_title": "QuantaVoice"
+  },
+  "background": {
+    "scripts": ["qvsecure.js","qvcontextmenu.js"]
   },
 "icons": {
 	"16": "qvicon.png",

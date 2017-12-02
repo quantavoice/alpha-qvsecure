@@ -7,6 +7,23 @@
 <html>
   <head>
     <title>QVsecure Popup</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="jquery-1.11.3.js"></script>
+<link rel="stylesheet" href="jquery-ui-1.11.4.custom/jquery-ui.css">
+<script src="jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+      }
+      //#status {
+      //  /* avoid an excessively wide status text */
+      //  white-space: pre;
+      //  text-overflow: ellipsis;
+      //  overflow: hidden;
+      //  max-width: 500px;
+      //}
+    </style>
     <style type="text/css">
       body {
         margin: 10px;
@@ -34,17 +51,11 @@
   </head>
 
   <body>
-    <h1>Background Color Changer</h1>
-    <div id="container">
-      <span>Choose a color</span>
-      <select id="dropdown">
-        <option selected disabled hidden value=''></option>
-        <option value="white">White</option>
-        <option value="pink">Pink</option>
-        <option value="green">Green</option>
-        <option value="yellow">Yellow</option>
-      </select>
-    </div>
+<div id="qvtoptabs">
+  <ul>
+    <li><a href="#qvpopup">qvpopup</a></li>
+    <li><a href="#qvsocial">qvsocial</a></li>
+  </ul>
     <div id="qvpopup">
 		<div id="qvheader">
 		<b><a href="http://www.quantavoice.com/" target="_new">QVsecure</a></b>
@@ -63,9 +74,60 @@
 		<b>Actions</b>
 		<p><label for="qvencrypt"><a href="#" id="qvEncryptA">encrypt</a></label><textarea id="qvencrypt" name="qvencrypt"></textarea></p>
 		<p><label for="qvsign"><a href="#">sign</a></label><textarea id="qvsign" name="qvsign"></textarea></p>
-		<p><label for="qvdecrypt"><a href="#">decrypt</a></label><textarea id="qvdecrypt" name="qvdecrypt"></textarea></p>
+		<p><label for="qvdecrypt"><a href="#" id="qvDecryptA">decrypt</a></label><textarea id="qvdecrypt" name="qvdecrypt"></textarea></p>
 		<p><label for="qvverify"><a href="#">verify</a></label><textarea id="qvverify" name="qvverify"></textarea></p>
 		</div><!-- qvactions -->
     </div><!-- qvpopup -->
+    <div id="qvsocial">
+<!-- BEGIN Social and analytics from Greenbox -->
+    <p><img src="qvicon48.png" style="vertical-align: middle;"><button id="bookmarkDemoButton">Bookmark</button><button id="bookmarkTagDemoButton">Tag</button></p>
+    <div><b>Title:</b><span id="pagetitle"></span></div>
+    <div><b>Link:</b><span id="pageurl"></span></div>
+    <div id="tags">
+    <span id="selectedTags"></span>
+    <span id="addTags"></span>
+<div class="ui-widget">
+  <label for="demotags">Add Tags: </label>
+  <input id="demotags">
+</div>
+    </div>
+    <div id="bookmark"></div>
+    <hr />
+    <p><button id="analysisDemoButton">Analyze page</button></p>
+    <div id="concepts"></div>
+    <div id="entities"></div>
+    <div id="related"></div>
+    <hr />
+    <!-- share links: https://jonsuh.com/blog/social-share-links/ -->
+<div id="tformat">
+  Share on
+  <input type="checkbox" id="shareFB"><label for="shareFB">FB</label>
+  <input type="checkbox" id="sharePI"><label for="sharePI">PIN</label>
+  <input type="checkbox" id="shareTW"><label for="shareTW">TWEET</label>
+  <input type="checkbox" id="shareGP"><label for="shareGP">G+</label>
+  <input type="checkbox" id="shareLN"><label for="shareLN">LNKD</label>
+  <input type="checkbox" id="shareRD"><label for="shareRD">RED</label>
+  <input type="checkbox" id="shareQV"><label for="shareQV">QV</label>
+</div>
+    <!--<p>Share on <button id="fbDemoButton">FB</button><button id="fbDemoButton">Pin</button><button id="fbDemoButton">Tweet</button><button id="fbDemoButton">G+</button><button id="fbDemoButton">IN</button><button id="fbDemoButton">QV</button>:<br />-->
+    <label for="shareTitle">Title:</label><input id="shareTitle" name="shareTitle" /><br />
+    <label for="shareComment">Comment:</label><textarea id="shareComment" name="shareComment"></textarea><br />
+    <label for="shareTags">Tags:</label><input id="shareTags" name="shareTags" /><br />
+    <button id="sharePrivacyButton">Privacy</button><button id="sharePostButton">Post</button>
+
+<input type="checkbox" id="tcheck"><label for="tcheck">Toggle</label>
+
+</p>
+<hr />
+    <div id="locationDiv"><span id="locationHrefSpan" style="display:none;"><a id="locationHref" href="#" target="_blank">Map</a></span><span id="location"></span></div>
+    <div id="nominatim"></div>
+<hr />
+    <p><a href="https://www.woodsidelabs.com/qvdemo/m.php">Account</a>-<a target="_blank" href="http://www.quantavoice.com/">Help</a></p>
+<hr />
+    <div id="status"></div>
+<!-- END Social and analytics from Greenbox -->
+</div> <!-- END #qvsocial div -->
+</div><!-- #qvtoptabs -->
+
   </body>
 </html>
